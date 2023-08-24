@@ -16,9 +16,9 @@ const Navbar = () => {
         <div className="nav-links-container">
           <p><Link to="/" className="">Home</Link></p>
           <p><Link to="/services" className="">Services</Link></p>
-          <p><Link to="/" className="">Careers</Link></p>
-          <p><Link to="/" className="">About</Link></p>
-          <p><Link to="/" className="">Contact</Link></p>
+          <p><Link to="/carrers" className="">Careers</Link></p>
+          <p><Link to="/about" className="">About</Link></p>
+          <p><Link to="/contact" className="">Contact</Link></p>
         </div>
       </div>
   
@@ -32,9 +32,9 @@ const Navbar = () => {
           <div className="nav-menu-container-links">
           <p><Link to="/" className="">Home</Link></p>
           <p><Link to="/services" className="">Services</Link></p>
-          <p><Link to="/" className="">Careers</Link></p>
-          <p><Link to="/" className="">About</Link></p>
-          <p><Link to="/" className="">Contact</Link></p>
+          <p><Link to="/carrers" className="">Careers</Link></p>
+          <p><Link to="/about" className="">About</Link></p>
+          <p><Link to="/contact" className="">Contact</Link></p>
           </div>
         </div>
         )}

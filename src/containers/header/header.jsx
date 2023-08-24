@@ -7,10 +7,8 @@ const Header = () => {
   return (
     <div className='header section-padding' id='home'>
       <div className='header-content'>
-        <h1 className='gradient-text'>Test bla bla </h1>
-        <p>Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment. Party we years to order allow asked of.</p>
-
-
+        <h1 className='gradient-text'>Discover Your Software Matchmaker</h1>
+        <p>Embark on a journey to find the software solution that perfectly suits your needs. Our dedicated team of experts will guide you through the landscape of options, ensuring you arrive at the destination of optimal efficiency. Let's get started on your software success story.</p>
         <div className='header-content-input'> 
         <Formbtn/>
         </div>

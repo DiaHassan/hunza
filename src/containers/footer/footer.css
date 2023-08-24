@@ -184,4 +184,10 @@
         font-size: 27px;
         line-height: 38px;
     }
+    .footer-input {
+        flex-direction: column;
+    }
+    .footer-input button{
+        margin-top: 1rem;
+    }
 }
