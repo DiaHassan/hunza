@@ -5,13 +5,13 @@
     margin-top: 1rem;
     border: solid;
     padding: 0.5rem 1.5rem;
-    border-color: #fff;
+    border-color: var(--color-w);
     border-width: 2px;
     border-radius: 25px;
     justify-content: center;
 }
 h2 {
-    color: #fff;
+    color: var(--color-w);
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 20px;
@@ -21,7 +21,7 @@ h2 {
 .btn-icon {
     margin-left: 0.5rem;
     padding-top: 3px;
-    color: #fff;
+    color: var(--color-w);
     font-size: 30px;
 }
 
@@ -43,14 +43,14 @@ h2 {
     background-color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
     animation-play-state: paused;
-    background-color: #fff;
-    border-color: black;
+    background-color: var(--color-w);
+    border-color: var(--color-bg);
 }
 
 .shaking-div:hover h2 {
-    color: black;
+    color: var(--color-bg);
 }
 
 .shaking-div:hover .btn-icon {
-      color: black;
+      color: var(--color-bg);
 }
