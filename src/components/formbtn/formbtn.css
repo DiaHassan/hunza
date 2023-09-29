@@ -27,20 +27,20 @@ h2 {
 
 
 @keyframes shake {
-    0%, 40%, 100% { transform: translateX(0); }
+    1%, 40%, 100% { transform: translateX(0); }
     10% , 30% { transform: translateX(-5px); }
     20% { transform: translateX(5px); }
 }
   
 
 .shaking-div {
-    animation: shake 6s ease-in-out infinite;
-    animation-play-state: running; 
-    transition: background-color 0.3s ease-in-out;
+    /* animation: shake 6s ease-in-out infinite; */
+    /* animation-play-state: running;  */
+    transition: background-color 0.4s ease-in-out;
 }
   
 .shaking-div:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
     cursor: pointer;
     animation-play-state: paused;
     background-color: var(--color-w);
