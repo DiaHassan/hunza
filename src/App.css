@@ -71,7 +71,29 @@ a {
   }
 }
 
-@media screen and (max-width: 700px) {
+.sc-display-none{
+  display: none
+}
+
+.sc-display-first {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 2rem;
+}
+
+.sc-display-second {
+  display: none;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 2rem;
+}
+
+@media screen and (max-width: 1000px) {
   .section-padding {
     padding: 4rem;
   }
@@ -79,6 +101,13 @@ a {
   .section-margin {
     margin: 4rem;
   }
+  .sc-display-first {
+    display: none;
+  }
+  .sc-display-second {
+    display: flex;
+  }
+  
 }
 
 @media screen and (max-width: 550px) {

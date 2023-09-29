@@ -21,3 +21,18 @@
     margin-bottom: 2rem;
 }
 
+
+
+@media screen and (max-width: 1070px) {
+.ch {
+    padding: 0 2rem;
+}
+}
+
+@media screen and (max-width: 650px) {
+
+}
+
+@media screen and (max-width: 490px) {
+  
+}

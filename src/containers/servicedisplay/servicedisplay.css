@@ -15,7 +15,7 @@
     margin-right: 2rem;
 }
 
-.sc-image img {
+img {
     width: 70%;
     height: 70%;
 }
@@ -71,11 +71,14 @@
     margin-top: 1rem;
 }
 
+
+
 @media screen and (max-width: 950px) {
     .sc {
         flex-direction: column;
     }
 
+    
     .sc-image {
         margin: 1rem 0;
     }
