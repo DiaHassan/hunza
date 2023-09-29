@@ -14,19 +14,19 @@ a {
     text-decoration: none;
 }
 .gradient-background {
-    background:-moz-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+    background:-moz-radial-gradient(circle at 0% 0%, rgba(128, 206, 215, 1) 0%, rgba(204, 219, 205, 1) 33%);
   
     /* safari 5.1+,chrome 10+ */
-    background:-webkit-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+    background:-webkit-radial-gradient(circle at 0% 0%, rgba(128, 206, 215, 1) 0%, rgba(204, 219, 205, 1) 33%);
   
     /* opera 11.10+ */
-    background:-o-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+    background:-o-radial-gradient(circle at 0% 0%, rgba(128, 206, 215, 1) 0%, rgba(204, 219, 205, 1) 33%);
   
     /* ie 10+ */
-    background:-ms-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+    background:-ms-radial-gradient(circle at 0% 0%, rgba(128, 206, 215, 1) 0%, rgba(204, 219, 205, 1) 33%);
   
     /* global 92%+ browsers support */
-    background:radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+    background:radial-gradient(circle at 0% 0%, rgba(128, 206, 215, 1) 0%, rgba(204, 219, 205, 1) 33%);
   }
 
   .gradient-text {
