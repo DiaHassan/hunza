@@ -31,7 +31,7 @@
 
 .nav-links-container p,
 .nav-menu-container p {
-    color: #fff;
+    color: var(--color-w);
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 18px;
@@ -45,7 +45,7 @@
 
 .nav-menu-container button {
     padding: 0.5rem 1rem;
-    color: #fff;
+    color: var(--color-w);
     background: #FF4820;
     font-family: var(--font-family);
     font-weight: 500;

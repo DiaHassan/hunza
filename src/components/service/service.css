@@ -20,7 +20,7 @@
     font-size: 18px;
     line-height: 24px;
     letter-spacing: -0.04em;
-    color: #fff;
+    color: var(--color-w);
 }
 
 .service-container-title div {
@@ -55,7 +55,7 @@
     /* padding: 0%; */
 }
 h3 {
-    color: #fff;
+    color: var(--color-w);
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 14px;
@@ -64,7 +64,7 @@ h3 {
 
 .service-icon {
     margin-left: 0.5rem;
-    color: #fff;
+    color: var(--color-w);
 }
 
 @media screen and (max-width: 550px) {
