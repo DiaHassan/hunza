@@ -68,7 +68,7 @@
     font-family: var(--font-family);
     font-size: 12px;
     line-height: 15px;
-    color: #fff;
+    color: var(--color-w);
 }
 
 .footer-links-div {
@@ -81,7 +81,7 @@
     font-size: 14px;
     line-height: 17px;
     font-family: var(--font-family);
-    color: #fff;
+    color: var(--color-w);
 
     margin-bottom: 0.9rem;
 }
@@ -90,7 +90,7 @@
     font-size: 12px;
     line-height: 15px;
     font-family: var(--font-family);
-    color: #fff;
+    color: var(--color-w);
 
     margin: 0.5rem 0;
     cursor: pointer;
@@ -106,7 +106,7 @@
     font-size: 12px;
     font-family: var(--font-family);
     line-height: 15px;
-    color: #fff;
+    color: var(--color-w);
 }
 
 .footer-input {
@@ -131,7 +131,7 @@
     border: 2px solid var(--color-footer);
     padding: 0 0rem;
     outline: none;
-    color: #fff;
+    color: var(--color-w);
 
 }
 
