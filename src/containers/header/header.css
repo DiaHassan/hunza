@@ -123,6 +123,21 @@
     }
 }
 
+.hover-image {
+    width: 10rem;
+    height: auto;
+    animation: hoverAnimation 2s infinite alternate;
+  }
+  
+  @keyframes hoverAnimation {
+    0% {
+      transform: translateY(10);
+    }
+    100% {
+      transform: translateY(-10px); 
+    }
+  }
+
 @media screen and (max-width: 650px) {
     .header-content h1 {
         font-size: 48px;

@@ -17,6 +17,7 @@ const Navbar = () => {
           <p><Link to="/" className="">Home</Link></p>
           <p><Link to="/services" className="">Services</Link></p>
           <p><Link to="/carrers" className="">Careers</Link></p>
+          <p><Link to="/blog" className="">Blog</Link></p>
           <p><Link to="/about" className="">About</Link></p>
           <p><Link to="/contact" className="">Contact</Link></p>
         </div>
@@ -28,11 +29,12 @@ const Navbar = () => {
           ? <RiCloseLine color="#fff" size={27} onClick={() => setToggleMenu(false)} />
           : <RiMenu3Line color="#fff" size={27} onClick={() => setToggleMenu(true)} />}
         {toggleMenu && (
-        <div className="nav-menu-container scale-up-center">
+          <div className="nav-menu-container scale-up-center">
           <div className="nav-menu-container-links">
           <p><Link to="/" className="">Home</Link></p>
           <p><Link to="/services" className="">Services</Link></p>
           <p><Link to="/carrers" className="">Careers</Link></p>
+          <p><Link to="/blog" className="">Blog</Link></p>
           <p><Link to="/about" className="">About</Link></p>
           <p><Link to="/contact" className="">Contact</Link></p>
           </div>

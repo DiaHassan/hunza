@@ -13,7 +13,7 @@ const Header = () => {
         <Formbtn/>
         </div>
       </div>
-      <div className="header-image">
+      <div className="header-image hover-image">
           <img src={Temp} alt='Not found'/>
       </div>
     </div>

@@ -10,4 +10,5 @@ export { default as Carrerheader} from './carrerhead/carrerheader'
 export { default as Staff} from './staff/staff'
 export { default as Aboutheader} from './aboutheader/aboutheader'
 export { default as Form} from './form/form'
+export { default as Blogpage} from './blogpage/blogpage'
 

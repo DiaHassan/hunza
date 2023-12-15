@@ -1,0 +1,29 @@
+.banner-container {
+    display: flex;
+    margin-top: 6rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--color-footer); /* Adjust the background color as needed */
+    color: var(--color-text); /* Adjust the text color as needed */
+
+  }
+  
+  .banner-item {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .banner-item h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .banner-item p {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  

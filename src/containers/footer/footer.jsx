@@ -5,13 +5,13 @@ const Footer = () => {
   return (
     <div className="footer section-padding">
     <div className="footer-heading">
-      <h1 className="gradient-text">Stay Ahead with Our Newsletter, Get Updates First!</h1>
+      <h1 className="gradient-text">Take a look around!</h1>
     </div>
 
-    <div className="footer-input">
+    {/* <div className="footer-input">
         <input type="email" placeholder="Your Email Address" />
         <button type="button">Subscribe</button>
-    </div>
+    </div> */}
 
     <div className="footer-links">
       <div className="footer-links-logo">
