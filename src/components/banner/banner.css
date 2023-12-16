@@ -1,11 +1,12 @@
 .banner-container {
     display: flex;
     margin-top: 6rem;
+    margin-bottom: 10rem;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     font-family: 'Manrope', sans-serif;
-    background-color: var(--color-footer); /* Adjust the background color as needed */
+    background-color: var(--color-footer);
     color: var(--color-text); /* Adjust the text color as needed */
 
   }
@@ -13,17 +14,35 @@
   .banner-item {
     flex: 1;
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 3rem;
     box-sizing: border-box;
+    
   }
   
   .banner-item h3 {
     margin-bottom: 1rem;
+    font-weight: 600;
     font-size: 1.5rem;
   }
   
   .banner-item p {
     margin: 0;
+    font-weight: 400;
     font-size: 1.1rem;
   }
   
+
+@media screen and (max-width: 650px) {
+  .banner-container {
+    flex-direction: column;
+  }
+  .banner-item {
+    margin-bottom: 2rem;
+    
+  }
+
+}
+
+@media screen and (max-width: 350px) {
+
+}

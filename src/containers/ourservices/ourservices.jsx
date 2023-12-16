@@ -7,11 +7,11 @@ const Ourservices = () => {
     <div >
       <div className="ours section-margin">
         <div className="ours-service">
-         <h1>Our Services</h1>
+         <h1>What we do</h1>
          <p>Unlocking business potential through innovative services. We provide comprehensive solutions spanning strategic planning, custom software development, streamlined integration, and unwavering support. Elevate your operations with our dedicated expertise.</p>
         </div>
         <div className="ours-heading">
-          <h1 className="gradient-text">The possibilities are beyond your imagination</h1>
+          <h1 className="gradient-text ours-heading-h1">The possibilities are beyond your imagination</h1>
           <p>Explore our services</p>
         </div>
         <div className="ours-container">

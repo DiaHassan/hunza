@@ -10,20 +10,25 @@ const Ourcustomers = () => {
         {/* <p>... our customers</p> */}
       </div>
       <div className="ourc-c">
-        <div>
+        <div className='ourc-div'>
           <img src={coop} alt='Not Found' className='rotate-vert-center grey-out' />
+          <p>"Their insightful strategies have been a game"</p>
         </div>
-        <div>
+        <div className='ourc-div'>
           <img src={afa} alt='Not Found' className='rotate-vert-center grey-out' />
+          <p>"Collaborate with confidence, achieve with assurance"</p>
         </div>
-        <div>
+        <div className='ourc-div'>
           <img src={wedplanix} alt='Not Found'  className='rotate-vert-center grey-out'/>
+          <p>"Their insightful strategies have been a game"</p>
         </div>
-        <div>
+        <div className='ourc-div'>
           <img src={google} alt='Not Found'  className='rotate-vert-center grey-out'/>
+          <p>"Their insightful strategies have been a game"</p>
         </div>
-        <div>
+        <div className='ourc-div'>
           <img src={fb} alt='Not Found'  className='rotate-vert-center grey-out' />
+          <p>"Collaborate with confidence, achieve with assurance"</p>
         </div>
     </div>
   </div>

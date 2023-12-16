@@ -9,21 +9,30 @@
 }
 
 .ourc-title {
-    margin: 2rem 0;
+    margin: 2rem 0 1rem 0;
+}
+
+.ourc-div{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgb(116, 116, 116);
 }
 
 .ourc-c {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+
     align-items: center;
-    margin: 2rem 0;
+    margin: 2rem 0 1.5rem 0;
 }
 
 .ourc-c div {
     flex: 1;
-    max-width: 150px;
-    min-width: 150px;
+    width: 10rem;
+    max-width: 10rem;
     margin: 2rem;
 
     
