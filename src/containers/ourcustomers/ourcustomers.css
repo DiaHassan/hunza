@@ -9,7 +9,7 @@
 }
 
 .ourc-title {
-    margin: 2rem 0 1rem 0;
+    margin: 2rem 0 0rem 0;
 }
 
 .ourc-div{
@@ -39,6 +39,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.ourc-c img{
+  min-width: 200px;
 }
 
 .grey-out {
@@ -81,3 +85,9 @@
    }
  }
  
+
+ @media screen and (max-width: 490px) {
+  .ourc-c img{
+    min-width: 80px;
+  }
+}

@@ -1,12 +1,16 @@
 import React from 'react'
 import { useState } from 'react';
 import './blogpage.css'
-import axios from 'axios';
+import { getFirestore, doc, addDoc, collection, getDocs,updateDoc } from "firebase/firestore"; 
 import { S1, S2 } from '../../assets'
+import '../../firebase.config';
 
 const Blogpage = () => {
     // Handeling what to show
+    const db = getFirestore();
     const [isPressed, setIsPressed] = useState(true);
+    const [blogdb, setBlogDb] = useState([]);
+    const [hhdb, setHhDb] = useState([]);
 
     const handleH3Click = () => {
       setTimeout(() => {
@@ -16,10 +20,42 @@ const Blogpage = () => {
     const wh3Class = isPressed ? 'menu-h3-underline' : 'menu-h3';
     const hh3Class = !isPressed ? 'menu-h3-underline' : 'menu-h3';
 
-    //Listing items in the grid
+
+    const ListGrid = ({ items }) => (
+      <div className="list-grid">
+        {items.map((item, index) => (
+          <ListItem key={index} item={item} />
+        ))}
+      </div>
+    );
+
+    function rtrdb(isPressed){
+      if(isPressed){return "blog"}
+      else{return "hh"}
+    }
+    const getFromFs = async () => {
+      const returnListblg = []
+      const returnListhh = []
+      
+      const blg = await getDocs(collection(db, "blog"));
+      blg.forEach((doc) => {
+        const tempList = []
+        tempList.push(doc.data())
+        returnListblg.push(tempList)
+      });
+      console.log(returnListblg)
+      setBlogDb(returnListblg)
+      const hh = await getDocs(collection(db, "hh"));
+      hh.forEach((doc) => {
+        const tempList = []
+        tempList.push(doc.data())
+        returnListhh.push(tempList)
+      });
+      setBlogDb(returnListhh)
+    }
 
     const ListItem = ({ item }) => (
-      <div className="list-item">
+      <div className="list-item" onClick={getFromFs}>
         <div className='list-item-imgdiv'>
           <img src={item.image} alt={item.title} />
         </div>
@@ -30,13 +66,6 @@ const Blogpage = () => {
       </div>
     );
       
-    const ListGrid = ({ items }) => (
-      <div className="list-grid">
-        {items.map((item, index) => (
-          <ListItem key={index} item={item} />
-        ))}
-      </div>
-    );
 
     // Temp
       const items = [
