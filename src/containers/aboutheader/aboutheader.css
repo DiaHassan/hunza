@@ -16,7 +16,7 @@
 }
 
 .ah-main-h1 {
-    font-size: 80px;
+    font-size: 5rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
 }
@@ -34,6 +34,10 @@
 @media screen and (max-width: 650px) {
     .ah {
         padding: 0 2rem;
+    }
+    .ah-main-h1{
+        text-align: center;
+        font-size: 3.5rem;
     }
 }
 
