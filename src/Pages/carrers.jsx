@@ -1,5 +1,5 @@
 import React from 'react'
-import { Footer, Tocontact, Jobadd, Carrerheader } from '../containers'
+import { Footer, Tocontact, Jobadd, Carrerheader, Contactemail } from '../containers'
 import {Navbar} from '../components'
 import { S1 } from '../assets'
 
@@ -28,7 +28,14 @@ const Carrers = () => {
       - Experience of cloud services - AWS/Google or Azur cloud services' 
       WYWD='We are seeking a Senior Full-Stack Developer to design and build enterprise customer-oriented solutions using latest tools and technologies. This role requires extensive hands-on software design and development skills, deep technical expertise of frontend and backend technologies. You will manage all aspects of the software development lifecycle including design, testing, implementation, deployment and maintenance.' 
       image={S1}/>
-      <Tocontact/>
+      <Contactemail email='info@hunzaconsulting.com' text='We are eagerly anticipating the opportunity to welcome a new member to our dynamic team. If you are passionate, skilled, and ready to make a meaningful impact, we want to hear from you! Join us on our journey of innovation and growth – lets shape the future together. Apply now and be a part of something extraordinary!
+
+
+
+
+
+
+'/>
       <Footer/>
     </div>
   )

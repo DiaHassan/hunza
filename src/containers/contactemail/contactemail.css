@@ -1,0 +1,15 @@
+.ce h2{
+    font-size: 3rem;
+}
+
+.ce h3{
+    margin: 1.2rem 0;
+    font-size: 1.6rem;
+}
+
+.ce p{
+    font-family: var(--font-family);
+    font-size: 1.2rem;
+    color: var(--color-text);
+    padding-right: 6rem;
+}

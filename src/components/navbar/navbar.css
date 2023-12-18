@@ -75,7 +75,7 @@
     flex-direction: column;
     
     text-align: end;
-    background: var(--color-footer);
+    background: #3498db;
     padding: 2rem;
     position: absolute;
     right: 0;

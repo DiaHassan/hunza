@@ -30,9 +30,9 @@ const Jobadd = ({title, WWALF, req, extra, WYWD, image}) => {
                 <div>{extra}</div>
             </div>
         </div>
-        <div>
+        {/* <div>
             <button className='jba-btn' type="button">Apply Here!</button>
-        </div>
+        </div> */}
       </div>
 
   )
