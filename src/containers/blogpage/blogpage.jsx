@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './blogpage.css'
 import { getFirestore, doc, addDoc, collection, getDocs,updateDoc } from "firebase/firestore"; 
 import { S1, S2 } from '../../assets'
@@ -13,6 +13,7 @@ const Blogpage = () => {
     const [hhdb, setHhDb] = useState([]);
 
     const handleH3Click = () => {
+      
       setTimeout(() => {
         setIsPressed(!isPressed);
       }, 100);
@@ -24,9 +25,9 @@ const Blogpage = () => {
     const ListGrid = ({ items }) => (
       <div className="list-grid">
         {items.map((item, index) => (
-          <ListItem key={index} item={item} />
+          <ListItem key={index} item={item[0]} />          
         ))}
-      </div>
+     </div>
     );
 
     function rtrdb(isPressed){
@@ -44,20 +45,26 @@ const Blogpage = () => {
         returnListblg.push(tempList)
       });
       console.log(returnListblg)
-      setBlogDb(returnListblg)
+      setBlogDb(returnListblg.reverse())
       const hh = await getDocs(collection(db, "hh"));
       hh.forEach((doc) => {
         const tempList = []
         tempList.push(doc.data())
         returnListhh.push(tempList)
       });
-      setBlogDb(returnListhh)
+      console.log(returnListhh)
+      setHhDb(returnListhh.reverse())
+    }
+
+    const isFormgot = () =>{
+      console.log(blogdb)
+      console.log(hhdb)
     }
 
     const ListItem = ({ item }) => (
-      <div className="list-item" onClick={getFromFs}>
+      <div className="list-item" onClick={isFormgot}>
         <div className='list-item-imgdiv'>
-          <img src={item.image} alt={item.title} />
+          <img src={item.imglnk} alt={item.title} />
         </div>
         <div className='list-item-iden'>
           <h3>{item.title}</h3>
@@ -145,6 +152,15 @@ const Blogpage = () => {
         },
       ];
 
+      useEffect(() => {
+          getFromFs()
+          console.log('This function runs once when the component is mounted.');
+        
+        return () => {
+          console.log('Clean-up function runs when the component is unmounted.');
+        };
+      }, []);
+
   return (
     <div className='header section-padding blog'>
         <div className='menu'>
@@ -163,7 +179,7 @@ const Blogpage = () => {
             </div>
         </div>
         <div className='blog-grid'>
-          <ListGrid items = {isPressed? items:items2}/>
+          <ListGrid items = {isPressed? blogdb:hhdb}/>
         </div>
     </div>
   )
