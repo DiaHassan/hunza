@@ -4,6 +4,8 @@ import './blogpage.css'
 import { getFirestore, doc, addDoc, collection, getDocs,updateDoc } from "firebase/firestore"; 
 import { S1, S2 } from '../../assets'
 import '../../firebase.config';
+import Blogdisplay from '../blogdisplay/blogdisplay';
+import CC from '../../assets/cc.svg'
 
 const Blogpage = () => {
     // Handeling what to show
@@ -11,6 +13,8 @@ const Blogpage = () => {
     const [isPressed, setIsPressed] = useState(true);
     const [blogdb, setBlogDb] = useState([]);
     const [hhdb, setHhDb] = useState([]);
+    const [viewBlog, setViewBlog] = useState(true);
+    const [displayed, setDisplayed] = useState();
 
     const handleH3Click = () => {
       
@@ -22,18 +26,9 @@ const Blogpage = () => {
     const hh3Class = !isPressed ? 'menu-h3-underline' : 'menu-h3';
 
 
-    const ListGrid = ({ items }) => (
-      <div className="list-grid">
-        {items.map((item, index) => (
-          <ListItem key={index} item={item[0]} />          
-        ))}
-     </div>
-    );
 
-    function rtrdb(isPressed){
-      if(isPressed){return "blog"}
-      else{return "hh"}
-    }
+
+
     const getFromFs = async () => {
       const returnListblg = []
       const returnListhh = []
@@ -56,13 +51,30 @@ const Blogpage = () => {
       setHhDb(returnListhh.reverse())
     }
 
-    const isFormgot = () =>{
-      console.log(blogdb)
-      console.log(hhdb)
+    const isFormgot = async (ind) =>{
+      console.log(viewBlog)
+      if(isPressed){setDisplayed(blogdb[ind])}
+      else{setDisplayed(hhdb[ind])}
+      setViewBlog(false)
     }
-
+    const ListGrid = ({ items }) => (
+      <div className="list-grid">
+        {items.map((item, index) => (
+          // <ListItem key={index} item={item[0]} onClick={isFormgot(index)} />
+          <div key={index} className="list-item" onClick={() => isFormgot(index)}>
+            <div className='list-item-imgdiv'>
+              <img src={item[0].imglnk} alt={item[0].title} />
+            </div>
+            <div className='list-item-iden'>
+              <h3>{item[0].title}</h3>
+              <p>{item[0].date}</p>
+            </div>
+          </div>        
+        ))}
+     </div>
+    );
     const ListItem = ({ item }) => (
-      <div className="list-item" onClick={isFormgot}>
+      <div className="list-item" >
         <div className='list-item-imgdiv'>
           <img src={item.imglnk} alt={item.title} />
         </div>
@@ -73,87 +85,14 @@ const Blogpage = () => {
       </div>
     );
       
+      function rndr() {
+        return <ListGrid items = {isPressed? blogdb:hhdb}/>
+      }
 
-    // Temp
-      const items = [
-        {
-          image: S1,
-          title: 'This is quite a longer title lets see how it turns out',
-          date: '2023-10-27',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        },
-        {
-          image: S1,
-          title: 'Item 2',
-          date: '2023-10-28',
-          text: 'Pellentesque ac justo in ante eleifend blandit at nec ipsum.',
-        },
-        {
-          image: S1,
-          title: 'Item 3',
-          date: '2023-10-29',
-          text: 'Fusce tincidunt varius turpis eu condimentum.',
-        },
-        {
-            image: S1,
-            title: 'Item 3',
-            date: '2023-10-29',
-            text: 'Fusce tincidunt varius turpis eu condimentum.',
-        },
-        {
-            image: S1,
-            title: 'Item 3',
-            date: '2023-10-29',
-            text: 'Fusce tincidunt varius turpis eu condimentum.',
-        },
-        {
-            image: S1,
-            title: 'Item 3',
-            date: '2023-10-29',
-            text: 'Fusce tincidunt varius turpis eu condimentum.',
-        },
-      ];
-      const items2 = [
-        {
-          image: S2,
-          title: 'Item 1',
-          date: '2023-10-27',
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        },
-        {
-          image: S2,
-          title: 'Item 2',
-          date: '2023-10-28',
-          text: 'Pellentesque ac justo in ante eleifend blandit at nec ipsum.',
-        },
-        {
-          image: S2,
-          title: 'Item 3',
-          date: '2023-10-29',
-          text: 'Fusce tincidunt varius turpis eu condimentum.',
-        },
-        {
-            image: S2,
-            title: 'Item 3',
-            date: '2023-10-29',
-            text: 'Fusce tincidunt varius turpis eu condimentum.',
-        },
-        {
-            image: S2,
-            title: 'Item 3',
-            date: '2023-10-29',
-            text: 'Fusce tincidunt varius turpis eu condimentum.',
-        },
-        {
-            image: S2,
-            title: 'Item 3',
-            date: '2023-10-29',
-            text: 'Fusce tincidunt varius turpis eu condimentum.',
-        },
-      ];
 
       useEffect(() => {
           getFromFs()
+          setViewBlog(true)
           console.log('This function runs once when the component is mounted.');
         
         return () => {
@@ -162,25 +101,46 @@ const Blogpage = () => {
       }, []);
 
   return (
-    <div className='header section-padding blog'>
-        <div className='menu'>
-            <div className='menu-div'>
-                <h3 className={wh3Class} onClick={isPressed? null :handleH3Click}>
-                    What's Up at Hunza?
-                </h3>
+    <div>
+      {!viewBlog && 
+      <div className='section-padding'>
+          <div className='backbtn'>
+            <img src={CC} alt='Close Blog' onClick={() => setViewBlog(true)}/>
+          </div>
+          <div className='blogv'>
+          <img
+            src={displayed[0].imglnk}
+            alt="Banner"
+            />
+            <div className='inf'>
+              <div className='td'>
+                <h2>{displayed[0].title}</h2>
+                <p>{displayed[0].date}</p>
+              </div>
+              <p className='text'>{displayed[0].text}</p>  
             </div>
-            <div className='menu-div'>
-                <h1 className='menu-h1'>/</h1>
-            </div>
-            <div className='menu-div'>
-                <h3 className={hh3Class} onClick={isPressed? handleH3Click: null}>
-                    Hunza Happenings
-                </h3>
-            </div>
-        </div>
-        <div className='blog-grid'>
-          <ListGrid items = {isPressed? blogdb:hhdb}/>
-        </div>
+          </div>
+      </div>}
+      {viewBlog && <div className='header section-padding blog'>
+          <div className='menu'>
+              <div className='menu-div'>
+                  <h3 className={wh3Class} onClick={isPressed? null :handleH3Click}>
+                      What's Up at Hunza?
+                  </h3>
+              </div>
+              <div className='menu-div'>
+                  <h1 className='menu-h1'>/</h1>
+              </div>
+              <div className='menu-div'>
+                  <h3 className={hh3Class} onClick={isPressed? handleH3Click: null}>
+                      Hunza Happenings
+                  </h3>
+              </div>
+          </div>
+          <div className='blog-grid'>
+            {rndr()}
+          </div>
+      </div>}
     </div>
   )
 }

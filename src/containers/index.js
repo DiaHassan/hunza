@@ -12,4 +12,6 @@ export { default as Aboutheader} from './aboutheader/aboutheader'
 export { default as Form} from './form/form'
 export { default as Blogpage} from './blogpage/blogpage'
 export { default as Contactemail} from './contactemail/contactemail'
+export { default as Blogdisplay} from './blogdisplay/blogdisplay'
+
 
