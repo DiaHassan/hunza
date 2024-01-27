@@ -2,8 +2,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    padding: 2rem 6rem;
+    width: 100%;
+    position: fixed;
+    padding: 1.5rem 6rem;
+    transition: background-color 0.3s ease;
+    z-index: 1000; /* Set a higher z-index value */
 }
 
 .nav-links {
@@ -13,13 +16,18 @@
     align-items: center;
 }
 
+.nav.scrolled {
+    background-color: #add7f3;
+    /* Add other styles as needed */
+  }
+
 .nav-logo {
     margin-right: 1.5rem;
 }
 
 .nav-logo img {
-    height: 8rem;
-    width: 8rem;
+    height: 5rem;
+    width: 5rem;
     /* width: 75px;
     height: 30px; */
 }

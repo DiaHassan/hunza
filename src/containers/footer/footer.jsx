@@ -1,6 +1,7 @@
 import React from 'react'
 import './footer.css'
-import logo from '../../assets/logo.svg'
+// import logo from '../../assets/logo.svg'
+import logo from '../../assets/logo2.png'
 const Footer = () => {
   return (
     <div className="footer section-padding">
@@ -18,29 +19,38 @@ const Footer = () => {
         <img src={logo} alt="gpt3-logo" />
 
       </div>
-      <div className="footer-links-div">
+      {/* <div className="footer-links-div">
         <h4>Navigation</h4>
         <p>Home</p>
         <p>Services</p>
         <p>Carrers</p>
         <p>About</p>
-      </div>
+      </div> */}
       <div className="footer-links-div">
-        <h4>Company</h4>
-        <p>Terms & Conditions </p>
-        <p>Privacy Policy</p>
-        <p>Contact</p>
+        <h4>Hunza Consulting AB</h4>
+        <p>Org.nr: 559047-3582</p>
+        <p><a href={`geo:${"Århusgatan 30 16445, Kista Sweden"}`}>Århusgatan 30 16445, Kista Sweden</a>.</p>
+
       </div>
       <div className="footer-links-div">
         <h4>Contact Details</h4>
-        <p>Århusgatan 30 16445, Kista Sweden</p>
-        <p>+46737745629</p>
-        <p>contact@hunzasonsulting.se</p>
+        <p>
+          
+          <a href={`tel:${"+46737745629"}`}>+46737745629</a>
+        </p>
+        <p>
+        <a href={`mailto:${"contact@hunzasonsulting.se"}`}>contact@hunzasonsulting.se</a>
+
+        </p>
+        <p>
+          
+          Monday - Friday: 07:00 - 16:00
+        </p>
       </div>
     </div>
 
     <div className="footer-copyright">
-      <p>©  2023  hunzaconsulting.se</p>
+      <p>©  2024  hunzaconsulting.se</p>
     </div>
   </div>
   )

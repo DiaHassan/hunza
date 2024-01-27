@@ -1,7 +1,7 @@
 import React from 'react'
 import { Footer, Form } from '../containers'
 import {Navbar} from '../components'
-import Uploadtodb from '../Presenter/uploadToDB'
+// import Uploadtodb from '../Presenter/uploadToDB'
 const Contact = () => {
   return (
     <div>
