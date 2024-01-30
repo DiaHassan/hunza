@@ -1,7 +1,7 @@
 import React from 'react'
 import './form.css'
 import cs from '../../assets/cs.jpg'
-
+import { S1, S2, S3} from '../../assets'
 
 const Form = () => {
   const handleSubmit = (event) => {
@@ -11,10 +11,26 @@ const Form = () => {
 
   return (
 
+        // <div className='cer section-padding'>
+        //   <h2>Let us help you!</h2>
+        //   <h3>info@hunza.se</h3>
+        //   <p>Join us on a journey of collaboration and success. Together, we can achieve remarkable outcomes. Discover what sets us apart and how our consulting solutions can make a difference for your organization. Ready to elevate your business? Explore the possibilities with us at Hunza.</p>
+        // </div>
         <div className='cer section-padding'>
-          <h2>Let us help you!</h2>
-          <h3>info@hunza.se</h3>
-          <p>Join us on a journey of collaboration and success. Together, we can achieve remarkable outcomes. Discover what sets us apart and how our consulting solutions can make a difference for your organization. Ready to elevate your business? Explore the possibilities with us at Hunza.</p>
+          <div className='fstaff'>
+            <div className='fstaff-card'>
+              <img src={S3} alt="Not found" />
+              <h1>Person 1</h1>
+              <h3>Human Resources</h3>
+              <a className='fstaff-carda' href={`mailto:${"contact@hunzasonsulting.se"}`}>contact@hunzasonsulting.se</a>
+            </div>
+            <div className='fstaff-card'>
+              <img src={S2} alt="Not found" />
+              <h1>Person 2</h1>
+              <h3>Technical Support</h3>
+              <a className='fstaff-carda' href={`mailto:${"contact@hunzasonsulting.se"}`}>contact@hunzasonsulting.se</a>
+            </div>
+          </div>
         </div>
 
     // <div className='form section-padding'>
