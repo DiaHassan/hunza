@@ -13,5 +13,6 @@ export { default as Form} from './form/form'
 export { default as Blogpage} from './blogpage/blogpage'
 export { default as Contactemail} from './contactemail/contactemail'
 export { default as Blogdisplay} from './blogdisplay/blogdisplay'
+export { default as Newservices} from './newservices/newservices'
 
 

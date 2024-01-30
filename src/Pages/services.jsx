@@ -10,7 +10,10 @@ const Service = () => {
         <Navbar/>
         <Servicecontainer/>
       </div>
-      <Servicedisplay
+
+
+      
+      {/* <Servicedisplay
       id="1"
       title="App Development"
       text="Transform your unique business needs into powerful software solutions. Our experts design, develop, and deploy tailored applications that align with your goals and boost efficiency. Transform your unique business needs into powerful software solutions. Our experts design, develop, and deploy tailored applications that align with your goals and boost efficiency."
@@ -36,7 +39,7 @@ const Service = () => {
       swt={false}
       clsipt1={"sc-display-first"}
       clsipt2={"sc-display-none"}
-      />
+      /> */}
       <Tocontact/>
       <Footer/>
     </div>

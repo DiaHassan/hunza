@@ -1,0 +1,102 @@
+.fnservice-item {
+  margin-top: 2rem;
+    padding: 2rem;
+    border: 1px solid #008bc1;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: height 0.3s;
+    width: 50rem;
+
+  }
+  
+  .fnservice-content {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+  }
+
+  .fnservice-short{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .fnservice-short img{
+    width: 10rem;
+    border-radius: 0.5rem;
+  }
+
+  .fnservice-header {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    margin-right: 4rem;
+  }
+
+  .fnservice-header h2{
+    font-size: 2rem;
+  }
+  p {
+    color: var(--color-text);
+    font-family: var(--font-family);
+  }
+  hr {
+    background-color: transparent;
+    margin-top: 2rem;
+    border: 0.05rem solid transparent;
+    border-top: 1px solid var(--color-text);
+    /* align-self: center; */
+    height: 1px;
+    margin-bottom: 1rem;
+
+
+
+  }
+  
+  .fnservice-item.expanded {
+    height: 200px; /* Set the expanded height as needed */
+  }
+  
+  /* Center the item on a lone row */
+  .fnservice-item.odd {
+    grid-column: span 2;
+  }
+  
+
+  @media screen and (max-width: 1000px) {
+    .fnservice-item {
+        width: 40rem;
+      }
+  }
+  @media screen and (max-width: 750px) {
+    .fnservice-item {
+        width: 30rem;
+      }
+  }
+
+  @media screen and (max-width: 550px) {
+    .fnservice-item {
+        width: 20rem;
+      }
+
+      .fnservice-short img{
+        width: 6rem;
+        border-radius: 0.5rem;
+      }
+
+      .fnservice-header {
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        margin-right: 1rem;
+      }
+    
+      .fnservice-header h2{
+        font-size: 1.5rem;
+      }
+      p {
+       font-size: 0.8rem;
+      }
+  }

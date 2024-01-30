@@ -10,10 +10,14 @@ const Navbar = () => {
 
   const [isScrolled, setIsScrolled] = useState(false);
 
+  const resety = () => {
+    window.scrollY = 0;
+  }
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY > 0;
       setIsScrolled(scrolled);
+
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -29,7 +33,7 @@ const Navbar = () => {
         <div className="nav-logo">
           <img src={logo} alt='Not found'/>
         </div>
-        <div className="nav-links-container">
+        <div  className="nav-links-container">
           <p><Link to="/" className="">Home</Link></p>
           <p><Link to="/services" className="">Services</Link></p>
           <p><Link to="/carrers" className="">Careers</Link></p>
