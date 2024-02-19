@@ -4,10 +4,10 @@ import './footer.css'
 import logo from '../../assets/logo2.png'
 const Footer = () => {
   return (
-    <div className="footer section-padding">
-    <div className="footer-heading">
+    <div className="footer">
+    {/* <div className="footer-heading">
       <h1 className="gradient-text">Take a look around!</h1>
-    </div>
+    </div> */}
 
     {/* <div className="footer-input">
         <input type="email" placeholder="Your Email Address" />

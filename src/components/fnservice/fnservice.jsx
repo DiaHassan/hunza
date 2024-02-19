@@ -13,16 +13,18 @@ const Fnservice = ({ service, expanded }) => {
       onClick={handelOC}
     >
       <div className="fnserviCe-content">
-        <div className='fnservice-short' >      
+      {!sh && <div className='fnservice-short' >      
           <div className="fnservice-header">
             <h2>{service.title}</h2>
             <p>{service.description}</p>
+            {!sh && <h3>Read More</h3>}
           </div>
           <img src={service.icon} alt={`${service.title} icon`} />
-          </div>
+        </div>}
+        {sh && <h3>Read Less</h3>}
         {sh && 
           <div>
-            <hr />  
+            {/* <hr />   */}
             <p> {service.longdescription}</p>
           </div>
         }

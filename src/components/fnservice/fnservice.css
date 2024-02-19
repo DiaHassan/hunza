@@ -1,12 +1,16 @@
 .fnservice-item {
   margin-top: 2rem;
+  display: flex;
     padding: 2rem;
-    border: 1px solid #008bc1;
+    /* border: 1px solid #008bc1; */
     border-radius: 1rem;
     cursor: pointer;
     transition: height 0.3s;
-    width: 50rem;
-
+    width: 37rem;
+    min-height: 23rem;
+    background-color: var(--color-footer);
+    justify-content: center;
+    align-items: center;
   }
   
   .fnservice-content {
@@ -38,6 +42,12 @@
   .fnservice-header h2{
     font-size: 2rem;
   }
+
+  h3{
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+
+  }
   p {
     color: var(--color-text);
     font-family: var(--font-family);
@@ -66,6 +76,11 @@
   
 
   @media screen and (max-width: 1000px) {
+      .fnservice-content {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+  }
     .fnservice-item {
         width: 40rem;
       }

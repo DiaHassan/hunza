@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    padding: 6rem 4rem 4rem 4rem;
     background: var(--color-footer);
 }
 

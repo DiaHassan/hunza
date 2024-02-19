@@ -1,7 +1,8 @@
 .service-list {
-  margin-top: 4rem;
-    display: flex;
-    flex-direction: column;
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
     justify-content: center;
   }
   
@@ -33,3 +34,20 @@
     grid-column: span 2;
   }
   
+
+  .service-list {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 1250px) {
+    .service-list {
+      margin-top: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+}
