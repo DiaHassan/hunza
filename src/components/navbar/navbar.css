@@ -3,10 +3,9 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    position: fixed;
+    /* position: fixed; */
     padding: 1.5rem 6rem;
-    transition: background-color 0.3s ease;
-    z-index: 1000; /* Set a higher z-index value */
+
 }
 
 .nav-links {
@@ -16,10 +15,9 @@
     align-items: center;
 }
 
-.nav.scrolled {
+/* .nav.scrolled {
     background-color: #add7f3;
-    /* Add other styles as needed */
-  }
+  } */
 
 .nav-logo {
     margin-right: 1.5rem;
